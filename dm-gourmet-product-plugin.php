@@ -5,7 +5,7 @@ Plugin Name: Gourmet Products
 Plugin URI: http://sunrivergourmet.com/
 Description: This is not just a plugin, its awesome in a can.
 Author: Bradford Knowlton
-Version: 1.0.1
+Version: 1.0.2
 Author URI: http://bradknowlton.com/
 GitHub Plugin URI: https://github.com/DesignMissoula/DM-gourmet-product-plugin
 */
@@ -26,7 +26,7 @@ function register_cpt_gourmet_product() {
         'not_found' => _x( 'No gourmet products found', 'gourmet_product' ),
         'not_found_in_trash' => _x( 'No gourmet products found in Trash', 'gourmet_product' ),
         'parent_item_colon' => _x( 'Parent Gourmet Product:', 'gourmet_product' ),
-        'menu_name' => _x( 'Gourmet Products', 'gourmet_product' ),
+        'menu_name' => _x( 'Products', 'gourmet_product' ),
     );
 
     $args = array( 
@@ -44,6 +44,7 @@ function register_cpt_gourmet_product() {
         'publicly_queryable' => true,
         'exclude_from_search' => false,
         'has_archive' => true,
+        'menu_icon' => 'dashicons-cart',
         'query_var' => true,
         'can_export' => true,
         'rewrite' => array( 
